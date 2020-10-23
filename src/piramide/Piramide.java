@@ -1,30 +1,36 @@
 
 package piramide;
 
+import java.util.Scanner;
+
 
 public class Piramide {
 
   
     public static void main(String[] args) {
-        for (int i = 1; i <= 10; i++) {
-            for (int j = 1; j <= i; j++) {
-                System.out.print(j+" ");
+        Scanner l=new Scanner(System.in);
+        qw q=new qw();
+        int op=0;
+        
+        do{
+            System.out.println("1.-Suma \n"
+                    + "2.-Resta  \n"
+                    + "3.-Salir");
+            
+            op=l.nextInt();
+            
+            switch(op){
+                case 1:
+                    q.suma(5,5);
+                    break;
+                    
+                case 2:
+                    q.resta(5,5);
+                    break;
             }
-            System.out.println("");
-        }
- 
-        for (int i = 1; i <= 10; i++) {
-            for (int j = 1; j <= i; j++) {
-                System.out.print(j+" ");
-            }
-            System.out.println("");
-        }
-        for (int i = 1; i <= 10; i++) {
-            for (int j = 1; j <= i; j++) {
-                System.out.print(j+" ");
-            }
-            System.out.println("");
-        }    
+            
+        }while(op!=3);
+        
     }
     
 }
